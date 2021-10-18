@@ -23,7 +23,6 @@
     "pkg:check": "manypkg check",
     "dedup": "yarn-deduplicate --strategy highest yarn.lock",
     "postinstall": "yarn dedup && lerna exec sort-package-json --parallel && yarn pkg:check && preconstruct dev",
-    "bootstrap": "lerna bootstrap --use-workspaces",
     "clean:full": "lerna clean --yes && rimraf node_modules",
     "clean:dist": "yarn lerna exec rimraf dist",
     "clean:storybook": "rimraf node_modules/.cache/storybook",
@@ -34,7 +33,7 @@
     "test": "jest --maxWorkers=50%",
     "test:watch": "jest --maxWorkers=25% --watch",
     "test:ci": "jest --runInBand",
-    "release": "yarn build && lerna publish from-git --yes --pre-dist-tag next"
+    "release": "yarn build && lerna publish from-git --force-publish --yes --pre-dist-tag next"
   },
   "resolutions": {
     "**/react": "17.0.2",
