@@ -1,0 +1,44 @@
+{
+  "name": "@sapatenis-ui/react",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:mrocha98/sapatenis-ui.git",
+    "directory": "packages/react"
+  },
+  "license": "BSD-3-Clause-Clear",
+  "author": "Matheus Rocha <matheus_rocha98@outlook.com> (https://mrocha.xyz/)",
+  "sideEffects": false,
+  "exports": {
+    "require": "./dist/sapatenis-ui-react.cjs.js",
+    "default": "./dist/sapatenis-ui-react.esm.js"
+  },
+  "main": "dist/sapatenis-ui-react.cjs.js",
+  "module": "dist/sapatenis-ui-react.esm.js",
+  "types": "dist/sapatenis-ui-react.cjs.d.ts",
+  "typings": "dist/sapatenis-ui-react.cjs.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "nodemon --watch src --exec yarn build -e ts,tsx",
+    "test": "jest --env=jsdom --passWithNoTests",
+    "prebuild": "rimraf dist",
+    "build": "concurrently yarn:build:*",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "test:cov": "yarn test --coverage"
+  },
+  "dependencies": {
+    "@sapatenis-ui/button": "*"
+  },
+  "devDependencies": {
+    "react": "~17.0.2",
+    "styled-components": "~5.3.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "styled-components": ">=5"
+  }
+}

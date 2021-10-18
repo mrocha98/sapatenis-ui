@@ -1,0 +1,39 @@
+{
+  "name": "@sapatenis-ui/button",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:mrocha98/sapatenis-ui.git",
+    "directory": "packages/button"
+  },
+  "license": "BSD-3-Clause-Clear",
+  "author": "Matheus Rocha <matheus_rocha98@outlook.com> (https://mrocha.xyz/)",
+  "sideEffects": false,
+  "exports": {
+    "require": "./dist/sapatenis-ui-button.cjs.js",
+    "default": "./dist/sapatenis-ui-button.esm.js"
+  },
+  "main": "dist/sapatenis-ui-button.cjs.js",
+  "module": "dist/sapatenis-ui-button.esm.js",
+  "types": "dist/sapatenis-ui-button.cjs.d.ts",
+  "typings": "dist/sapatenis-ui-button.cjs.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "nodemon --watch src --exec yarn build -e ts,tsx",
+    "prebuild": "rimraf dist",
+    "build": "concurrently yarn:build:*",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:types": "tsc --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "react": "~17.0.2",
+    "styled-components": "~5.3.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "styled-components": ">=5"
+  }
+}
