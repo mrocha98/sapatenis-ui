@@ -1,6 +1,6 @@
 {
   "name": "sapatenis-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "React components",
   "license": "BSD-3-Clause-Clear",
@@ -33,7 +33,7 @@
     "test": "jest --maxWorkers=50%",
     "test:watch": "jest --maxWorkers=25% --watch",
     "test:ci": "jest --runInBand",
-    "release": "yarn build && lerna publish from-git --force-publish --yes --pre-dist-tag next"
+    "release": "yarn build && lerna version --force-publish"
   },
   "resolutions": {
     "**/react": "17.0.2",
