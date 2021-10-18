@@ -34,9 +34,7 @@
     "test": "jest --maxWorkers=50%",
     "test:watch": "jest --maxWorkers=25% --watch",
     "test:ci": "jest --runInBand",
-    "prerestart": "yarn install --pure-lockfile && preconstruct dev",
-    "start": "yarn pkg:babel && yarn storybook:start",
-    "publish": "yarn build && lerna publish from-git --yes --pre-dist-tag next"
+    "release": "yarn build && lerna publish from-git --yes --pre-dist-tag next"
   },
   "resolutions": {
     "**/react": "17.0.2",
