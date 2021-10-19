@@ -1,6 +1,5 @@
 {
   "version": "independent",
-  "registry": "https://npm.pkg.github.com/mrocha98",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
