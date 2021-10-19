@@ -1,6 +1,6 @@
 {
   "version": "independent",
-  "registry": "https://registry.npmjs.org/",
+  "registry": "https://npm.pkg.github.com/mrocha98",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
@@ -13,14 +13,14 @@
     "publish": {
       "conventionalCommits": true,
       "message": "chore(release): publish",
+      "allowBranch": [
+        "main"
+      ],
       "ignoreChanges": [
         "**/__fixtures__/**",
         "**/__tests__/**",
         "**/stories/**",
         "**/*.md"
-      ],
-      "allowBranch": [
-        "main"
       ]
     }
   }
