@@ -1,6 +1,6 @@
 {
   "name": "@sapatenis-ui/react",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com:mrocha98/sapatenis-ui.git",
@@ -31,7 +31,7 @@
     "test:cov": "yarn test --coverage"
   },
   "dependencies": {
-    "@sapatenis-ui/button": "0.1.2"
+    "@sapatenis-ui/button": "0.1.3"
   },
   "devDependencies": {
     "react": "~17.0.2",
